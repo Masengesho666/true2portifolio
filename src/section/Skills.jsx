@@ -8,7 +8,7 @@ import {
   FaFigma,
   FaNodeJs,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si"; // Import Tailwind CSS logo
+import { SiTailwindcss } from "react-icons/si";
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(null);
@@ -48,7 +48,7 @@ const Skills = () => {
       LevelTextColor: "text-white",
       LevelBorderColor: "border-blue-500",
       NameColor: "text-blue-700",
-      SkillIcon: <SiTailwindcss className="text-4xl" />, // Updated icon
+      SkillIcon: <SiTailwindcss className="text-4xl" />,
     },
     {
       Name: "HTML",
@@ -91,17 +91,13 @@ const Skills = () => {
   return (
     <main
       id="skills"
-      className="h-screen bg-blue-100 py-10 flex items-center justify-center"
+      className="min-h-screen bg-blue-100 py-10 flex items-center justify-center"
     >
-      <div className="max-w-5xl mx-auto flex flex-wrap gap-6 justify-center">
+      <div className="max-w-5xl mx-auto flex flex-wrap gap-6 justify-center px-4 sm:px-6 lg:px-8">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`relative transition-transform duration-300 ease-in-out cursor-pointer ${
-              activeSkill === skill.Name
-                ? "-translate-y-2"
-                : "hover:-translate-y-1"
-            }`}
+            className={`relative transition-transform duration-300 ease-in-out cursor-pointer w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2`}
             onClick={() =>
               setActiveSkill(activeSkill === skill.Name ? null : skill.Name)
             }
