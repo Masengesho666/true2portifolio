@@ -3,6 +3,8 @@ import NotFound from "./pages/NotFound"
 import Home from "./pages/Home"
 import Navbar from "./components/Navbar"
 import Card from "./components/Card"
+
+  import Footer from "./components/Footer"
 const App = () => {
   return (
    <Router>
@@ -10,11 +12,11 @@ const App = () => {
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="./card" element={<Card/>} /> */}
+      <Route path="./card" element={<Card/>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     {/* {Footer} */}
-    <footer />
+    <Footer />
    </Router>
   )
 }
